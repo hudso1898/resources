@@ -1,0 +1,3 @@
+<h1>Edit Journal Entry</h1>
+<%= render partial: 'form', locals: { url: journal_path(@journal), method: :put } %>
+<%= link_to 'Back', journal_index_path %>

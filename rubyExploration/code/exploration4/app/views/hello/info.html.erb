@@ -1,0 +1,33 @@
+<h1>Matt Hudson's Exploration 4 Rails server</h1>
+
+<h3>Endpoints</h3>
+<h4>Hello Controller</h4>
+<ul>
+	<li>/ - Hello#info -
+		<%= link_to 'This page with route info', root_path %>
+	</li>
+	<li>/hello - Hello#index -
+		<%= link_to 'Hello World Page', hello_path %>
+	</li>
+</ul>
+<h4>Journal Application</h4>
+<ul>
+	<li>/journal - Journal#index -
+		<%= link_to 'List All Journal Entries', journal_index_path %>
+	</li>
+	<li>/journal/:id - Journal#show - Shows specific journal with given id - <%= link_to 'Example', journal_path(1) %>
+	</li>
+	<li>/journal/new - Journal#new - 
+		<%= link_to 'Create New Journal Entry (Protected)', new_journal_path %>
+	</li>
+	<li>/journal/edit/:id - Journal#edit - Updates a specified journal entry - <%= link_to 'Example', edit_journal_path(1) %> (Protected)
+	</li>
+	<li>
+		/journal/:id (PUT) - Journal#update - HTTP method to update a journal - must go through /journal/edit/:id (Protected)
+	</li>
+	<li>
+		/journal/:id (DELETE) - Journal#destroy - HTTP method to delete a journal - must go through /journal (Protected)
+	</li>
+
+</ul>
+<img src="https://i.ytimg.com/vi/gTqLQJN1QpE/maxresdefault.jpg" alt="Back to the Future Part III train">
